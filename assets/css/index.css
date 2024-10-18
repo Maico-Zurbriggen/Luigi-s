@@ -1,0 +1,255 @@
+:root {
+    --blue: #79A9F5;
+    --indigo: #C45F90;
+    --purple: #A16AE8;
+    --pink: #FC8BC0;
+    --red: #F85C70;
+    --orange: #FF8882;
+    --yellow: #FAD02C;
+    --green: #A3C14A;
+    --teal: #20c997;
+    --cyan: #47D8E0;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #bc8c4c;
+    --secondary: #6c757d;
+    --success: #A3C14A;
+    --info: #47D8E0;
+    --warning: #FAD02C;
+    --danger: #F85C70;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --font-family-sans-serif: "Fira Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    margin: 0;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #444;
+    text-align: left;
+    background-color: #fff;
+}
+
+h1,h2,h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--light);
+    margin: 0;
+}
+p, label{
+    color: var(--light);
+    margin: 0;
+    margin-top: .5rem;
+}
+
+img{
+    background: none;
+}
+
+.oscuro{
+    color: var(--gray-dark);
+}
+
+.boton{
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: .3rem;
+    border: none;
+}
+.boton:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.imagen{
+    width: 12rem;
+    height: 10rem;
+    border-radius: .2rem;
+}
+.logo{
+    width: 2rem;
+    height: 2rem;
+}
+
+.espaciado-bordes{
+    margin: 0 2rem;
+}
+
+.enlace-nav{
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    span{
+        color: var(--secondary);
+    }
+}
+.llamenos{
+    color: var(--primary);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.imagen-nav{
+    width: 6rem;
+    height: 6rem;
+}
+
+.primera-navegacion{
+    border-bottom: var(--gray-dark) solid .2rem;
+    background-color: var(--dark);
+    padding-top: .5rem;
+}
+
+.segunda-navegacion{
+    background-color: var(--dark);
+    .container{
+        .enlaces-nav{
+            width: 100%;
+            height: 4rem;
+            margin-top: 2rem;
+        }
+    }
+}
+
+.header{
+    background-image: url("../img/imagen_1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 5rem;
+    .overlay{
+        text-align: center;
+        margin: 2rem 0 2rem 0;
+        .subtitle, .title{
+            color: var(--light);
+            margin: 0;
+        }
+        .title{
+            font-size: 6rem;
+        }
+        .imagen-header{
+            display: block;
+            width: 20rem;
+            height: 20rem;
+        }
+    } 
+}
+.boton-header{
+    text-decoration: none;
+    color: var(--light);
+    display: inline-block;
+    background-color: var(--primary);
+}
+.boton-header:hover{
+    background-color: rgba(188, 140, 76, 0.7);
+}
+
+.section{
+    justify-content: center;
+    .imagen-section{
+        margin-right: 2.5rem;
+        width: 30rem;
+        height: 20rem;
+        border-radius: .2rem;
+    }
+    .texto-section{
+        width: 18rem;
+        margin-left: 2.5rem;
+    }
+}
+
+.footer{
+    background-color: var(--dark);
+    margin-top: 5rem;
+}
+.primer-footer{
+    border-bottom: var(--gray) solid .1rem;
+    padding-top: .5rem;
+}
+.segundo-footer{
+    .copyright{
+        color: var(--light);
+        .nombre{
+            color: rgba(108, 117, 125, 0.9);
+        }
+    }
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+    background-color: var(--dark);
+}
+.texto-menu{
+    width: 28rem;
+}
+
+.nosotros{
+    display: flex;
+    justify-content: center;
+}
+.texto-nosotros{
+    width: 70%;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario{
+    background-color: var(--gray-dark);
+    border-radius: .5rem;
+    width: 60%;
+}
+.form{
+    padding: 1rem;
+    label{
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .entrada{
+        width: 100%;
+        height: 1.5rem;
+        border-radius: .4rem;
+        margin-bottom: 1rem;
+    }
+}
