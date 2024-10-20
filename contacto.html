@@ -46,44 +46,42 @@
         </div>      
     </header>
 
-    <section class="contacto">
+    <section class="container columnas">
         <h1 class="oscuro">Reserve su lugar</h1>
-        <div class="formulario">
             <form action="/index.html" method="post" class="form">
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input class="entrada" type="text" id="nombre">
+                    <input type="text" id="nombre">
                 </div>
                 <div>
                     <label for="cantidad">Cantidad de lugares:</label>
-                    <input class="entrada" type="number" id="cantidad" min="1">
+                    <input type="number" id="cantidad" min="1">
                 </div>
                 <div>
                     <label for="fecha">Fecha:</label>
-                    <input class="entrada" type="date" id="fecha">
+                    <input type="date" id="fecha">
                     <label for="hora">Hora:</label>
-                    <input class="entrada" type="time" id="hora">
+                    <input type="time" id="hora">
                 </div>
                 <div>
                     <label for="email">Email:</label>
-                    <input class="entrada" type="email" id="email">
+                    <input type="email" id="email">
                 </div>
                 <div>
                     <label for="telefono">Teléfono:</label>
-                    <input class="entrada" type="tel" id="telefono">
+                    <input type="tel" id="telefono">
                 </div>
                 <div>
-                    <input class="boton-header boton" type="submit" value="Reservar">
+                    <input class="boton-marron boton" type="submit" value="Reservar">
                 </div>
             </form>
-        </div>
     </section>
 
-    <footer class="footer">
-        <div class="primer-footer">
+    <footer>
+        <div class="footer">
             <div class="container">
                 <a href="/index.html"><img class="imagen-nav" src="/assets/img/navbar-brand.svg" alt="imagen chef"></a>
-                <ul class="lista-footer">
+                <ul class="container">
                     <li>
                         <a class="boton" href="/index.html">Inicio</a>
                     </li>
@@ -99,9 +97,9 @@
                 </ul>
             </div>
         </div>
-        <div class="segundo-footer">
-            <div class="container">
-                <p class="copyright">&copy; 2024, <span class="nombre">Maico Zurbriggen</span> Todos los derechos reservados</p>
+        <div class="footer">
+            <div>
+                <p>&copy; 2024, <span>Maico Zurbriggen</span> Todos los derechos reservados</p>
             </div>
         </div>
     </footer>
