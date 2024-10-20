@@ -1,3 +1,4 @@
+/*Variables para colores y fuentes*/
 :root {
     --blue: #79A9F5;
     --indigo: #C45F90;
@@ -23,6 +24,7 @@
     --font-family-sans-serif: "Fira Sans", sans-serif;
 }
 
+/*Estilos generales, box-sizing: border-box hace que el padding y el border no alteren el alto y ancho total*/
 *,
 *::before,
 *::after {
@@ -30,45 +32,42 @@
   color: var(--light);
 }
 
+/*ESTILOS A LOS ELEMENTOS*/
 html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: var(--font-family-sans-serif);
+  -webkit-text-size-adjust: 100%; /*Asegura que el tamaño del texto no cambie al hacer zoom y se mantenga como se definio en el css*/
 }
 
 body {
     margin: 0;
-    font-family: "Fira Sans", sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.15;
 }
 
 section{
-    margin: 2rem 0;
+    margin: 2rem 0; /*Margen arriba y abajo en las secciones de cada pagina*/
 }
 
-h1,h2,h3{
-    text-align: center;
+h1,h2,h3,label,a{ /*Definimos los elementos que iran en negritas*/
     font-weight: bold;
+}
+
+h1,h2,h3{ /*Todos los encabezados centrados con negritas y sin margen*/
+    text-align: center;
     margin: 0;
 }
-p{
+p{ /*Definimos un margen para los parrafos*/
     margin: .5rem 0 0 0;
 }
 label{
-    font-weight: bold;
     text-transform: uppercase;
 }
 a{
     text-decoration: none;
-    font-weight: bold;
-}
-.oscuro{
-    color: var(--gray-dark);
 }
 
+/*Estilos para los input que no son de tipo submit*/
 input:not(input[type="submit"]){
     width: 100%;
     height: 1.5rem;
@@ -82,7 +81,7 @@ ul, ol{
     margin: 0;
 }
 
-img{
+img{ /*Tamaño general para las imagenes y borde*/
     width: 12rem;
     height: 10rem;
     border-radius: .2rem;
@@ -92,56 +91,68 @@ span{
     color: var(--secondary);
 }
 
-.boton{
+/*ESTILOS PARA BOTONES*/
+.boton{ /*Estilos generales para nuestros botones*/
     padding: 1rem 2rem 1rem 2rem;
     border-radius: .3rem;
     border: none;
 }
-.boton:hover{
+.boton:hover{ 
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.container{
+.boton-marron{ /*Botones marrones*/
+    display: inline-block;
+    background-color: var(--primary);
+}
+.boton-marron:hover{
+    background-color: rgba(188, 140, 76, 0.7);
+}
+
+/*ESTILOS A LAS CLASES*/
+.oscuro{ /*Color para ciertos textos*/
+    color: var(--gray-dark);
+}
+.texto-marron{ /*Color marron para el texto de llamenos*/
+    color: var(--primary);
+}
+
+.container{ /*Estilo general para distribuir los elementos de forma horizontal en un bloque*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     min-height: 5rem;
 }
-.columnas{
+.columnas{ /*Cambiamos container a columnas*/
     flex-direction: column;
 }
-.centrado{
+.centrado{ /*Cambiamos la distribucion horizontal de container a centrada*/
     justify-content: center;
 }
+.espaciado-uniforme{ /*Cambiamos la distribucion horizontal de container a un espaciado uniforme*/
+    justify-content: space-around;
+}
 
-.ancho-texto{
+.ancho-texto{ /*Definimos el ancho de algunos textos, inicio y menu*/
     width: 80%;
     margin-left: 1rem;
 }
 
-.enlaces-nav{
-    justify-content: space-around;
-}
-
-.navegacion{
+.navegacion{ /*Definimos estilos para la navegacion de las paginas*/
     background-color: var(--dark);
     padding: .2rem;
 }
-.navegacion:first-child{
+.navegacion:first-child{ /*Borde debajo de la primer navegacion*/
     border-bottom: var(--gray-dark) solid .2rem;
 }
 
-.imagen-nav{
+.imagen-nav{ /*Definimos el tamaño de las imagenes de la navegacion y el footer*/
     width: 6rem;
     height: 6rem;
 }
 
-.llamenos{
-    color: var(--primary);
-}
-
-.header{
+.header{ /*Definimos estilos para el header de las paginas, trabajamos la imagen de fondo*/
     background-image: url("../img/imagen_1.png");
     background-size: cover;
     background-position: center;
@@ -150,41 +161,34 @@ span{
     background-blend-mode: overlay;
     padding: 2rem 0;
 }
-.overlay{
+.overlay{ /*Alineamos todos los elementos del header en el centro*/
     text-align: center;
     margin: 0 auto;
 } 
-.imagen-header{
+.imagen-header{ /*Definimos el tamaño de la imagen del header*/
     width: 20rem;
     height: 20rem;
 }
-.boton-marron{
-    display: inline-block;
-    background-color: var(--primary);
-}
-.boton-marron:hover{
-    background-color: rgba(188, 140, 76, 0.7);
-}
 
-.footer{
+.footer{ /*Definimos estilos para el footer de las paginas*/
     background-color: var(--dark);
     padding: .2rem;
 }
-.footer:first-child{
+.footer:first-child{ /*Borde debajo del primer footer*/
     border-bottom: var(--gray) solid .1rem;
 }
 
-.imagen-inicio{
+.imagen-inicio{ /*Definimos el tamaño de la imagen de la pagina de inicio*/
     margin-right: 2.5rem;
     width: 30rem;
     height: 20rem;
 }
-.texto-inicio{
+.texto-inicio{ /*Definimos el ancho del texto de la pagina de inicio*/
     width: 20rem;
     margin-left: 2.5rem;
 }
 
-.menu{
+.menu{ /*Definimos la distribucion del menu como una grilla*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -193,7 +197,7 @@ span{
     background-color: var(--dark);
 }
 
-.form{
+.form{ /*Definimos los estilos del formulario*/
     background-color: var(--gray-dark);
     border-radius: .5rem;
     width: 60%;
