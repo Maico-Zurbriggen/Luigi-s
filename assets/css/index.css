@@ -124,6 +124,14 @@ span{
     align-items: center;
     min-height: 5rem;
 }
+@media(max-width: 768px) { /*Cambiando la distribucion de container para que sea responsive*/
+    .container{
+        flex-direction: column;
+    }
+    li{
+        margin: 1rem 0;
+    }
+}
 .columnas{ /*Cambiamos container a columnas*/
     flex-direction: column;
 }
@@ -187,6 +195,15 @@ span{
     width: 20rem;
     margin-left: 2.5rem;
 }
+@media(max-width: 768px) { /*Haciendo responsive el texto e imagen de la pagina de inicio*/
+    .imagen-inicio{
+        margin: 0;
+    }
+    .texto-inicio{
+        margin: 1rem 0 0 0;
+        width: 80%;
+    }
+}
 
 .menu{ /*Definimos la distribucion del menu como una grilla*/
     display: grid;
@@ -195,6 +212,15 @@ span{
     gap: 2rem;
     padding: 0 1rem;
     background-color: var(--dark);
+}
+@media(max-width: 768px) { /*Redefinimos la grilla para que sea de 1 columna y 6 filas para que sea responsive*/
+    .menu{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        .container{
+            flex-direction: row;
+        }
+    }
 }
 
 .form{ /*Definimos los estilos del formulario*/
