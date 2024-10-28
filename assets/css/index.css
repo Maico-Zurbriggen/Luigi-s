@@ -104,6 +104,7 @@ span{
 .boton-marron{ /*Botones marrones*/
     display: inline-block;
     background-color: var(--primary);
+    margin-top: .4rem;
 }
 .boton-marron:hover{
     background-color: rgba(188, 140, 76, 0.7);
